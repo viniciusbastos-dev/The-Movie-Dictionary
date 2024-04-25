@@ -5,7 +5,7 @@ export const Container = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 `;
 
 export const Form = styled.form`
@@ -22,7 +22,7 @@ export const InputWrap = styled.div`
 
 export const Title = styled.h1`
   font-family: "FontSpring", sans-serif;
-  font-size: 90px;
+  font-size: 84px;
 `;
 
 export const Text = styled.span`
