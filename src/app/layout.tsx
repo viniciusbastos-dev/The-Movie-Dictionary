@@ -1,16 +1,18 @@
-import StyledComponentsRegistry from "@/lib/registry";
-import { GlobalStyle } from "@/themes/GlobalStyle";
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import GlobalStyles from "./ui/styles/GlobalStyles";
+import Providers from "./lib/providers";
+import { DM_Sans } from "next/font/google";
 
-const roboto = Roboto({
-  weight: ["400", "500", "700"],
+const DMSans = DM_Sans({
   subsets: ["latin"],
+  display: "swap",
+  variable: "--font-DMSans",
+  weight: ["400", "500", "700"],
 });
 
 export const metadata: Metadata = {
   title: "The Movie Dictionary",
-  description: "Veja detalhes dos seus programas e  filmes favoritos",
+  description: "Veja detalhes dos seus programas e filmes favoritos",
 };
 
 export default function RootLayout({
@@ -20,11 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={roboto.className}>
-        <StyledComponentsRegistry>
-          <GlobalStyle />
+      <body className={DMSans.className}>
+        <Providers>
+          <GlobalStyles />
           {children}
-        </StyledComponentsRegistry>
+        </Providers>
       </body>
     </html>
   );
