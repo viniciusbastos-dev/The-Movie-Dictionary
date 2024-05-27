@@ -4,11 +4,11 @@ import styled from "styled-components";
 
 export const Container = styled.header<any>`
   position: relative;
-  z-index: 5;
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  z-index: 5;
   justify-items: center;
   align-items: center;
-  grid-template-columns: "1fr 1fr 1fr";
   padding: 22px 95px;
 `;
 
