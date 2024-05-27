@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import * as S from "./styles";
 import Input from "../Input";
@@ -50,7 +51,7 @@ const Header = () => {
       )}
 
       <S.RightRow>
-        <Link href="/entrar">Entrar</Link>
+        <Link href="/login">Entrar</Link>
         <S.Pressable onClick={() => handleMenu()}>
           <Lottie
             lottieRef={menuButtonRef}
