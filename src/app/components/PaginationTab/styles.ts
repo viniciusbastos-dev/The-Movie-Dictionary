@@ -18,11 +18,12 @@ export const Span = styled.span`
 
 export const PageNumber = styled.div<any>`
   cursor: pointer;
-  font-size: 16px;
+  font-size: ${({ $active }) => ($active ? "16px" : "12px")};
   color: ${({ $active, theme }) => ($active ? "white" : theme.colors.gray400)};
   position: relative;
   display: flex;
   align-items: center;
+  transition: 0.3s;
 
   ${({ $active }) =>
     $active &&
@@ -31,6 +32,7 @@ export const PageNumber = styled.div<any>`
       content: "";
       display: block;
      
+      transition: 0.3s;
       height: 3px;
       width: 20px;
       border-radius: 6px;

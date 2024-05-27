@@ -41,6 +41,7 @@ const Hero: React.FC<Props> = ({ data }) => {
                   alt="Logo do IMDB"
                   width={35}
                   height={17}
+                  draggable={false}
                 />
                 <S.Votes>
                   {(currentMedia.vote_average * 10).toFixed()}/100

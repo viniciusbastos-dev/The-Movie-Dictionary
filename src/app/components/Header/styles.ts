@@ -2,13 +2,14 @@
 
 import styled from "styled-components";
 
-export const Container = styled.header`
+export const Container = styled.header<any>`
   position: relative;
   z-index: 5;
   display: grid;
   justify-items: center;
   align-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: ${({ isMobile }) =>
+    isMobile ? "1fr 1fr" : "1fr 1fr 1fr"};
   padding: 22px 95px;
 `;
 
@@ -24,6 +25,10 @@ export const RightRow = styled.div`
   display: flex;
   align-items: center;
   gap: 24px;
+
+  a {
+    font-weight: 700;
+  }
 `;
 
 export const Title = styled.h1``;

@@ -5,10 +5,21 @@ import { SearchIcon } from "@/app/ui/assets/SVG";
 import Lottie, { LottieRefCurrentProps } from "lottie-react";
 import hamburguerMenu from "@/app/ui/lottie/hamburguerMenu.json";
 import Image from "next/image";
+import Link from "next/link";
 
 const Header = () => {
   const [isToggled, setIsToggled] = React.useState(false);
   const menuButtonRef = React.useRef<LottieRefCurrentProps | null>(null);
+  const [tamanhoTela, setTamanhoTela] = React.useState(window.innerWidth);
+
+  React.useEffect(() => {
+    function handleResize() {
+      setTamanhoTela(window.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const handleMenu = () => {
     if (menuButtonRef.current) {
@@ -19,7 +30,7 @@ const Header = () => {
   };
 
   return (
-    <S.Container>
+    <S.Container isMobile={tamanhoTela < 1024}>
       <S.LeftRow>
         <Image
           src="/tv.png"
@@ -30,13 +41,16 @@ const Header = () => {
         />
         <S.Title>The Movie Dictionary</S.Title>
       </S.LeftRow>
-      <Input
-        placeholder="Busque algum show..."
-        width={525}
-        endAdornment={<SearchIcon />}
-      />
+      {tamanhoTela > 1024 && (
+        <Input
+          placeholder="Busque algum show..."
+          width={525}
+          endAdornment={<SearchIcon />}
+        />
+      )}
 
       <S.RightRow>
+        <Link href="/entrar">Entrar</Link>
         <S.Pressable onClick={() => handleMenu()}>
           <Lottie
             lottieRef={menuButtonRef}
