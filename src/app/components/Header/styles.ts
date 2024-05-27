@@ -8,8 +8,7 @@ export const Container = styled.header<any>`
   display: grid;
   justify-items: center;
   align-items: center;
-  grid-template-columns: ${({ isMobile }) =>
-    isMobile ? "1fr 1fr" : "1fr 1fr 1fr"};
+  grid-template-columns: "1fr 1fr 1fr";
   padding: 22px 95px;
 `;
 

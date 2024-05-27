@@ -11,16 +11,6 @@ import Link from "next/link";
 const Header = () => {
   const [isToggled, setIsToggled] = React.useState(false);
   const menuButtonRef = React.useRef<LottieRefCurrentProps | null>(null);
-  const [tamanhoTela, setTamanhoTela] = React.useState(window.innerWidth);
-
-  React.useEffect(() => {
-    function handleResize() {
-      setTamanhoTela(window.innerWidth);
-    }
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   const handleMenu = () => {
     if (menuButtonRef.current) {
@@ -31,7 +21,7 @@ const Header = () => {
   };
 
   return (
-    <S.Container isMobile={tamanhoTela < 1024}>
+    <S.Container>
       <S.LeftRow>
         <Image
           src="/tv.png"
@@ -42,13 +32,12 @@ const Header = () => {
         />
         <S.Title>The Movie Dictionary</S.Title>
       </S.LeftRow>
-      {tamanhoTela > 1024 && (
-        <Input
-          placeholder="Busque algum show..."
-          width={525}
-          endAdornment={<SearchIcon />}
-        />
-      )}
+
+      <Input
+        placeholder="Busque algum show..."
+        width={525}
+        endAdornment={<SearchIcon />}
+      />
 
       <S.RightRow>
         <Link href="/login">Entrar</Link>
