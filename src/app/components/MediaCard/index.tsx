@@ -14,7 +14,10 @@ const MediaCard: React.FC<Props> = ({ data }) => {
   const [favorite, setFavorite] = useState(false);
   return (
     <S.Container>
-      <S.FavoriteButton favorite={favorite} onClick={() => setFavorite(true)}>
+      <S.FavoriteButton
+        favorite={favorite}
+        onClick={() => setFavorite(!favorite)}
+      >
         <HeartIcon />
       </S.FavoriteButton>
 
