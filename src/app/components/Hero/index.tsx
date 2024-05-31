@@ -69,8 +69,9 @@ const Hero: React.FC<Props> = ({ data }) => {
                       src={item.background}
                       alt={currentMedia?.title}
                       quality={70}
-                      fill
-                      sizes="100vw"
+                      layout="responsive"
+                      width={1920}
+                      height={600}
                       priority
                       draggable={false}
                       style={{
