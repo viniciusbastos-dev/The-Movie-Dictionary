@@ -7,6 +7,36 @@ export const Background = styled.div`
   inset: 0;
   opacity: 0.7;
 
+  .autoplay-progress {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: ${({ theme }) => theme.colors.rose400};
+  }
+
+  .autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: ${({ theme }) => theme.colors.rose400};
+    fill: none;
+    stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+  }
+
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -67,4 +97,8 @@ export const Description = styled.p`
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   line-height: 1.2em;
+
+  @media screen and (max-width: 768px) {
+    -webkit-line-clamp: 8;
+  }
 `;

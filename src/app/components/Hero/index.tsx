@@ -8,6 +8,7 @@ import Button from "../Button";
 import Header from "../Header";
 import { Swiper, SwiperSlide } from "swiper/react";
 import PaginationTab from "../PaginationTab";
+import { Autoplay } from "swiper/modules";
 
 interface Props {
   data?: MediaInterface[];
@@ -25,6 +26,18 @@ const Hero: React.FC<Props> = ({ data }) => {
   if (overview.length > maxLength) {
     overview = overview.substring(0, maxLength) + "...";
   }
+  const progressCircle = useRef<SVGSVGElement | null>(null);
+  const progressContent = useRef<HTMLSpanElement | null>(null);
+
+  const onAutoplayTimeLeft = (_: any, time: number, progress: number) => {
+    if (progressCircle.current && progressContent.current) {
+      progressCircle.current.style.setProperty(
+        "--progress",
+        (1 - progress).toString()
+      );
+      progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+    }
+  };
 
   return (
     <S.Container>
@@ -62,13 +75,19 @@ const Hero: React.FC<Props> = ({ data }) => {
                   position: "relative",
                   zIndex: 5,
                 }}
+                autoplay={{
+                  delay: 3000,
+                  pauseOnMouseEnter: true,
+                }}
+                onAutoplayTimeLeft={onAutoplayTimeLeft}
+                modules={[Autoplay]}
               >
                 {data?.map((item) => (
                   <SwiperSlide key={item.id}>
                     <Image
                       src={item.background}
                       alt={currentMedia?.title}
-                      quality={70}
+                      quality={100}
                       layout="responsive"
                       width={1920}
                       height={1080}
@@ -84,6 +103,12 @@ const Hero: React.FC<Props> = ({ data }) => {
                   actualPage={currentIndex}
                   totalPages={data?.length ?? 0}
                 />
+                <div className="autoplay-progress" slot="container-end">
+                  <svg viewBox="0 0 48 48" ref={progressCircle}>
+                    <circle cx="24" cy="24" r="20"></circle>
+                  </svg>
+                  <span ref={progressContent}></span>
+                </div>
               </Swiper>
             </S.Background>
           </>
