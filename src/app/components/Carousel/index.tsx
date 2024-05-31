@@ -5,17 +5,20 @@ import * as S from "./styles";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { MediaInterface } from "@/@types/types";
 import MediaCard from "../MediaCard";
+import Link from "next/link";
 
 interface Props {
   title: string;
   data: MediaInterface[];
+  href: string;
 }
 
-const Carousel: React.FC<Props> = ({ title, data }) => {
+const Carousel: React.FC<Props> = ({ title, data, href }) => {
   return (
     <S.Container>
       <S.Row>
         <S.Title>{title}</S.Title>
+        <Link href={href}>Ver mais</Link>
       </S.Row>
       <Swiper
         slidesPerView={"auto"}

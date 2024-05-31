@@ -4,6 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Carousel from "./components/Carousel";
+import Footer from "./components/Footer";
 
 async function getData() {
   const res = await fetch(
@@ -54,10 +55,11 @@ export default async function Home() {
       <Hero data={data} />
       <main>
         <section>
-          <Carousel title="Filmes em alta" data={movieData} />
-          <Carousel title="Séries em alta" data={serieData} />
+          <Carousel title="Filmes em alta" data={movieData} href="/filmes" />
+          <Carousel title="Séries em alta" data={serieData} href="/series" />
         </section>
       </main>
+      <Footer />
     </>
   );
 }

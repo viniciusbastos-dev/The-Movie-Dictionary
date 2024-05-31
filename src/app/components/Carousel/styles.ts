@@ -22,6 +22,12 @@ export const Container = styled.div`
 export const Row = styled.div`
   display: flex;
   justify-content: space-between;
+
+  a {
+    font-size: 18px;
+    font-weight: 500;
+    color: ${({ theme }) => theme.colors.rose700};
+  }
 `;
 
 export const Title = styled.h3`
