@@ -71,7 +71,7 @@ const Hero: React.FC<Props> = ({ data }) => {
                       quality={70}
                       layout="responsive"
                       width={1920}
-                      height={600}
+                      height={1080}
                       priority
                       draggable={false}
                       style={{

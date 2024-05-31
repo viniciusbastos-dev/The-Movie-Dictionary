@@ -2,14 +2,22 @@
 
 import styled from "styled-components";
 
-export const Container = styled.header<any>`
+export const Container = styled.nav<any>`
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  z-index: 5;
-  justify-items: center;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  z-index: 5;
   padding: 22px 95px;
+
+  @media screen and (max-width: 1024px) {
+    padding: 22px 48px;
+  }
+
+  @media screen and (max-width: 640px) {
+    padding: 16px 24px;
+  }
 `;
 
 export const LeftRow = styled.div`
@@ -30,7 +38,13 @@ export const RightRow = styled.div`
   }
 `;
 
-export const Title = styled.h1``;
+export const Title = styled.h1`
+  font-size: 24px;
+
+  @media screen and (max-width: 1024px) {
+    font-size: 16px;
+  }
+`;
 
 export const Pressable = styled.button`
   outline: none;
