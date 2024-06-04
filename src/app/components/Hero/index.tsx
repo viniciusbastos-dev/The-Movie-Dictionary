@@ -48,18 +48,20 @@ const Hero: React.FC<Props> = ({ data }) => {
           <>
             <S.Content>
               <S.Title>{currentMedia.title}</S.Title>
-              <S.Row>
-                <Image
-                  src="/IMDB-Logo.png"
-                  alt="Logo do IMDB"
-                  width={35}
-                  height={17}
-                  draggable={false}
-                />
-                <S.Votes>
-                  {(currentMedia.vote_average * 10).toFixed()}/100
-                </S.Votes>
-              </S.Row>
+              {currentMedia.vote_average > 0 && (
+                <S.Row>
+                  <Image
+                    src="/IMDB-Logo.png"
+                    alt="Logo do IMDB"
+                    width={35}
+                    height={17}
+                    draggable={false}
+                  />
+                  <S.Votes>
+                    {(currentMedia.vote_average * 10).toFixed()}/100
+                  </S.Votes>
+                </S.Row>
+              )}
               <S.Description>{currentMedia.overview}</S.Description>
               <Button
                 text="Assistir trailer"

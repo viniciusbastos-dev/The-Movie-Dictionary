@@ -4,8 +4,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   position: relative;
-  width: 250px;
-  max-width: fit-content;
 `;
 
 export const Body = styled.div`

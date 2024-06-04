@@ -28,18 +28,24 @@ const MediaCard: React.FC<Props> = ({ data }) => {
         width={250}
         height={370}
         style={{ maxHeight: 370 }}
+        loading="lazy"
       />
       <S.Body>
         <S.ReleaseDate>{data.release_date}</S.ReleaseDate>
         <S.Title>{data.title}</S.Title>
         <S.Row>
-          <Image
-            src="/IMDB-Logo.png"
-            alt="Logo do IMDB"
-            width={35}
-            height={17}
-          />
-          <S.Votes>{(data.vote_average * 10).toFixed(1)} / 100</S.Votes>
+          {data.vote_average > 0 && (
+            <>
+              <Image
+                src="/IMDB-Logo.png"
+                alt="Logo do IMDB"
+                width={35}
+                height={17}
+                loading="lazy"
+              />
+              <S.Votes>{(data.vote_average * 10).toFixed(1)} / 100</S.Votes>
+            </>
+          )}
         </S.Row>
       </S.Body>
     </S.Container>
