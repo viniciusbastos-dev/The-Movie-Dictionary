@@ -9,8 +9,9 @@ export default function Home() {
           <div className=" h-[70vh] w-screen relative  after:bg-gradient-to-b after:w-screen after:block after:h-[70%] after:absolute after:bottom-0 before:bg-gradient-to-t  before:w-screen before:block before:h-[70%] before:absolute from-dark-opaque to-dark">
             <Image
               src={background}
-              alt="lancer"
+              alt="Imagem com vários filmes e séries em quadrados."
               layout="fill"
+              priority
               className="object-cover object-center -z-10"
             />
           </div>
