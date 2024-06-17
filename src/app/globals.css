@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .h-logo-clamped {
+    height: clamp(2.188rem, 8vw, 3.75rem);
+    width: auto;
+  }
+
+  .px-header-clamped {
+    padding-left: clamp(16px, 10vw, 186px);
+    padding-right: clamp(16px, 10vw, 186px);
+  }
+
+  .title-header-clamped {
+    font-size: clamp(28px, 7vw, 58px);
+  }
+
+  .description-header-clamped {
+    font-size: clamp(14px, 2vw, 18px);
+  }
+}
+
+body {
+  background-color: #141414;
+  color: #fff;
+}
