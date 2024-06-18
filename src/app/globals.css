@@ -21,12 +21,42 @@
     font-size: clamp(28px, 7vw, 58px);
   }
 
-  .description-header-clamped {
+  .subtitle-clamped {
     font-size: clamp(14px, 2vw, 18px);
+  }
+
+  .category-title-clamped {
+    font-size: clamp(24px, 4vw, 38px);
+  }
+
+  .card-image-clamp {
+    width: clamp(60px, 12vw, 120px);
+    height: clamp(60px, 12vw, 120px);
   }
 }
 
 body {
   background-color: #141414;
   color: #fff;
+}
+
+.swiper-pagination-genere > .swiper-pagination-bullet {
+  cursor: pointer;
+  margin: 3px;
+  background-color: #333333;
+  width: 18px;
+  border-radius: 100px;
+  height: 4px;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  height: 4px;
+  background-color: #e50000;
+  width: 18px;
+  border-radius: 100px;
+}
+
+.swiper-slide {
+  max-width: fit-content !important;
+  margin-right: clamp(20px, 3vw, 30px) !important;
 }
