@@ -9,10 +9,10 @@ interface Props {
 
 const FooterList: React.FC<Props> = ({ title, data }) => {
   return (
-    <ul className="flex flex-col gap-3">
+    <ul className="flex flex-col gap-3 justify-self-start">
       <li className="font-bold mb-3">{title}</li>
       {data?.links?.map((link, index) => (
-        <li key={index} className="text-grey60">
+        <li key={index} className="text-grey60 ">
           <Link className="hover:text-grey75" href={link.href}>
             {link.label}
           </Link>
