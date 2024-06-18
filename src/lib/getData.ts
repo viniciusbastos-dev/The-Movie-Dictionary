@@ -2,7 +2,6 @@ import { fetchFromApi } from "../../utils/api";
 
 export async function getGenres() {
   const response = await fetchFromApi("/genre/movie/list?language=pt-BR");
-  console.log(response);
   const data = await response.json();
 
   await new Promise((resolve) => setTimeout(resolve, 1000));

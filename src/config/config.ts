@@ -15,46 +15,46 @@ export const FooterLinksData: FooterSection[] = [
   {
     title: "Início",
     links: [
-      { label: "Categorias", href: "/categorias" },
-      { label: "Dispositivos", href: "/dispositivos" },
-      { label: "Preços", href: "/precos" },
-      { label: "FAQ", href: "/faq" },
+      { label: "Categorias", href: "#" },
+      { label: "Dispositivos", href: "#" },
+      { label: "Preços", href: "#" },
+      { label: "FAQ", href: "#" },
     ],
   },
   {
     title: "Filmes",
     links: [
-      { label: "Gêneros", href: "/generos-filmes" },
-      { label: "Tendências", href: "/tendencias-filmes" },
-      { label: "Lançamentos", href: "/lancamentos-filmes" },
-      { label: "Popular", href: "/populares-filmes" },
+      { label: "Gêneros", href: "#" },
+      { label: "Tendências", href: "#" },
+      { label: "Lançamentos", href: "#" },
+      { label: "Popular", href: "#" },
     ],
   },
   {
     title: "Shows",
     links: [
-      { label: "Gêneros", href: "/generos-shows" },
-      { label: "Tendências", href: "/tendencias-shows" },
-      { label: "Lançamentos", href: "/lancamentos-shows" },
-      { label: "Popular", href: "/populares-shows" },
+      { label: "Gêneros", href: "#" },
+      { label: "Tendências", href: "#" },
+      { label: "Lançamentos", href: "#" },
+      { label: "Popular", href: "#" },
     ],
   },
   {
     title: "Suporte",
-    links: [{ label: "Contate-nos", href: "/contato" }],
+    links: [{ label: "Contate-nos", href: "#" }],
   },
   {
     title: "Inscrição",
     links: [
-      { label: "Planos", href: "/planos" },
-      { label: "Features", href: "/features" },
+      { label: "Planos", href: "#" },
+      { label: "Features", href: "#" },
     ],
   },
   {
     title: "Conecte-se conosco",
     links: [
-      { label: "Planos", href: "/planos" },
-      { label: "Features", href: "/features" },
+      { label: "Planos", href: "#" },
+      { label: "Features", href: "#" },
     ],
   },
 ];
