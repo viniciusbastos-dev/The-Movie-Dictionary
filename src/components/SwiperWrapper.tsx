@@ -24,6 +24,7 @@ const SwiperWrapper: React.FC<Props> = ({ children }) => {
           slidesPerGroup: 2,
         },
         1024: {
+          slidesPerGroup: 2,
           pagination: {
             el: ".swiper-desktop",
             type: "bullets",
@@ -34,6 +35,13 @@ const SwiperWrapper: React.FC<Props> = ({ children }) => {
         },
         1280: {
           slidesPerGroup: 3,
+          pagination: {
+            el: ".swiper-desktop",
+            type: "bullets",
+            renderBullet: function (index, className) {
+              return '<span class="' + className + '"></span>';
+            },
+          },
         },
       },
       slidesPerView: "auto",
