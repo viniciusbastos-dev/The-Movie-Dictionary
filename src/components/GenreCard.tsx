@@ -15,7 +15,7 @@ const GenreCard: React.FC<Props> = ({ data, movies }) => {
 
   return (
     <div className=" bg-black10 w-fit rounded-[10px] border-[1px] border-black15 hover:scale-95 transition duration-300 cursor-pointer p-5 lg:p-6 xl:p-[30px]">
-      <div className=" grid grid-cols-2 gap-1 relative after:bg-gradient-to-b from-black10-opaque to-black10 after:block after:z-[20] after:absolute after:w-full after:h-full">
+      <div className="image-fade grid grid-cols-2 gap-1 relative after:bg-gradient-to-b from-black10-opaque to-black10 ">
         {genreMovies[data.name].map((item: any) => (
           <div className="relative card-image-clamp" key={item.id}>
             <Image

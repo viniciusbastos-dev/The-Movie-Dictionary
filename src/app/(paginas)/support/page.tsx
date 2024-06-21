@@ -1,12 +1,12 @@
 import React from "react";
 
 interface Props {}
-const MoviesPage: React.FC<Props> = () => {
+const SupportPage: React.FC<Props> = () => {
   return (
     <main className="min-h-screen">
-      <h1>Movies Page</h1>
+      <h1>Support Page</h1>
     </main>
   );
 };
 
-export default MoviesPage;
+export default SupportPage;

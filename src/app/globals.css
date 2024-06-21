@@ -33,6 +33,14 @@
     width: clamp(60px, 12vw, 120px);
     height: clamp(60px, 12vw, 120px);
   }
+
+  .image-fade::after {
+    display: block;
+    z-index: 20;
+    position: absolute;
+    width: 100%;
+    height: calc(100% + 1px);
+  }
 }
 
 body {
