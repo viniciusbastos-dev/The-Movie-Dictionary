@@ -14,8 +14,8 @@ interface Props {
 const SwiperWrapper: React.FC<Props> = ({ children }) => {
   const swiperRef = useRef<Swiper | null>(null);
 
-  useEffect(() => {
-    if (swiperRef.current) return; // Evita a inicialização múltipla
+  const initializeSwiper = () => {
+    if (swiperRef.current) swiperRef.current.destroy();
 
     swiperRef.current = new Swiper(".swiper", {
       slidesPerGroup: 1,
@@ -23,23 +23,47 @@ const SwiperWrapper: React.FC<Props> = ({ children }) => {
         480: {
           slidesPerGroup: 2,
         },
+        1024: {
+          pagination: {
+            el: ".swiper-desktop",
+            type: "bullets",
+            renderBullet: function (index, className) {
+              return '<span class="' + className + '"></span>';
+            },
+          },
+        },
         1280: {
           slidesPerGroup: 3,
         },
       },
       slidesPerView: "auto",
       pagination: {
-        el: ".swiper-pagination-genere",
-        clickable: true,
-        renderBullet: function (index: number, className: string) {
+        el: ".swiper-mobile",
+        type: "progressbar",
+        renderProgressbar: function (className) {
           return '<span class="' + className + '"></span>';
         },
       },
       navigation: {
-        nextEl: ".swiper-next-genere",
-        prevEl: ".swiper-prev-genere",
+        nextEl: ".swiper-next-button",
+        prevEl: ".swiper-prev-button",
       },
     });
+  };
+
+  useEffect(() => {
+    initializeSwiper(); // Initial setup
+
+    const handleResize = () => {
+      initializeSwiper(); // Re-initialize on resize
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      if (swiperRef.current) swiperRef.current.destroy(); // Cleanup
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (

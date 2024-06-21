@@ -23,9 +23,12 @@ const config: Config = {
         black10: "#1A1A1A",
         black12: "#1F1F1F",
         black15: "#262626",
+        black20: "#333333",
 
         grey60: "#999999",
         grey75: "#BFBFBF",
+
+        red45: "#E50000",
       },
     },
   },

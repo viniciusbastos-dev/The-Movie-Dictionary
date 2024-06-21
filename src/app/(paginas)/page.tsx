@@ -5,7 +5,7 @@ import * as SVG from "@/assets/SVG";
 import SwiperWrapper from "@/components/SwiperWrapper";
 import { Suspense } from "react";
 import { fetchMoviesByGenres, getGenres } from "@/lib/getData";
-import GenreCarouselSlider from "@/components/GenereCarouselSlider";
+import GenreCarouselSlider from "@/components/GenreCarouselSlider";
 
 async function GenreCarousel() {
   const genres: { id: number; name: string }[] = await getGenres();
@@ -63,12 +63,12 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="hidden md:flex border-[1px] border-black12 bg-black06 p-3 rounded-[10px] gap-3 min-h-[72px]">
-              <div className="swiper-prev-genere cursor-pointer bg-black10 rounded-md border-[1px] border-black12 p-[10px]">
+            <div className="hidden lg:flex border-[1px] border-black12 bg-black06 p-3 rounded-[10px] gap-3 min-h-[72px]">
+              <div className="swiper-prev-button cursor-pointer bg-black10 rounded-md border-[1px] border-black12 p-[10px]">
                 <SVG.ArrowLeft />
               </div>
-              <div className="swiper-pagination-genere flex items-center"></div>
-              <div className="swiper-next-genere cursor-pointer bg-black10 rounded-md border-[1px] border-black12 p-[10px] ">
+              <div className="swiper-desktop flex items-center"></div>
+              <div className="swiper-next-button cursor-pointer bg-black10 rounded-md border-[1px] border-black12 p-[10px] ">
                 <SVG.ArrowRight />
               </div>
             </div>
@@ -80,6 +80,9 @@ export default function Home() {
                 <GenreCarousel />
               </Suspense>
             </SwiperWrapper>
+            <div className="lg:hidden relative mt-8 mx-auto w-20">
+              <div className="swiper-mobile" />
+            </div>
           </div>
         </section>
       </main>
