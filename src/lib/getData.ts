@@ -1,3 +1,4 @@
+import { Genre } from "@/@types/types";
 import { fetchFromApi } from "../../utils/api";
 
 export async function getGenres() {
@@ -6,7 +7,7 @@ export async function getGenres() {
 
   await new Promise((resolve) => setTimeout(resolve, 1000));
 
-  return data.genres;
+  return data.genres.slice(0, 10);
 }
 
 export async function getMoviesByGenre(genreId: number) {
@@ -17,9 +18,7 @@ export async function getMoviesByGenre(genreId: number) {
   return data.results.slice(0, 4);
 }
 
-export async function fetchMoviesByGenres(
-  genres: { id: number; name: string }[]
-) {
+export async function fetchMoviesByGenres(genres: Genre[]) {
   const moviesByGenre = await Promise.all(
     genres.map(async (genre) => {
       const movies = await getMoviesByGenre(genre.id);

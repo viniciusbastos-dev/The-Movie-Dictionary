@@ -9,30 +9,16 @@
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-
-  .h-logo-clamped {
+  .responsive-logo {
     height: clamp(2.188rem, 8vw, 3.75rem);
-    width: auto;
-  }
-
-  .px-header-clamped {
-    padding-left: clamp(16px, 10vw, 186px);
-    padding-right: clamp(16px, 10vw, 186px);
   }
 
   .title-header-clamped {
-    font-size: clamp(28px, 7vw, 58px);
+    font-size: clamp(28px, 4.3vw, 58px);
   }
 
-  .subtitle-clamped {
-    font-size: clamp(14px, 2vw, 18px);
-  }
-
-  .category-title-clamped {
-    font-size: clamp(24px, 4vw, 38px);
+  .section-mb-clamp {
+    margin-bottom: clamp(40px, 6vw, 80px);
   }
 
   .card-image-clamp {
@@ -47,6 +33,11 @@
     width: 100%;
     height: calc(100% + 1px);
   }
+
+  .list-with-bar li:not(:last-child) {
+    border-right: 1px solid #262626;
+    padding-right: 20px;
+  }
 }
 
 body {
@@ -54,16 +45,16 @@ body {
   color: #fff;
 }
 
-.swiper-mobile.swiper-pagination-progressbar {
+.swiper-pagination-mobile.swiper-pagination-progressbar {
   border-radius: 20px;
   overflow: hidden;
 }
 
-.swiper-mobile > .swiper-pagination-progressbar-fill {
+.swiper-pagination-mobile > .swiper-pagination-progressbar-fill {
   border-radius: 20px;
 }
 
-.swiper-desktop > .swiper-pagination-bullet {
+.swiper-pagination-desktop > .swiper-pagination-bullet {
   cursor: pointer;
   margin: 3px;
   background-color: #333333;
@@ -82,4 +73,10 @@ body {
 .swiper-slide {
   max-width: fit-content !important;
   margin-right: clamp(20px, 3vw, 30px) !important;
+}
+
+.swiper-button-disabled {
+  transition-duration: 0.3s;
+  opacity: 0.5;
+  cursor: auto;
 }

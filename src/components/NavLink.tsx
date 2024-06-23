@@ -16,7 +16,7 @@ const NavLink: React.FC<Props> = ({ href = "#", children, ...rest }) => {
       {...rest}
       href={href}
       className={`${
-        path === href ? "bg-black10 text-white" : "text-grey75"
+        path === href ? "bg-black-10 text-white" : "text-gray-75"
       } rounded-lg py-[14px] px-6 block xl:text-lg lg:text-sm`}
     >
       {children}

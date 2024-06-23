@@ -7,10 +7,10 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="float-left relative z-10 w-full px-header-clamped xl:py-8 lg:py-6 pt-10 pb-4 flex justify-between">
+    <header className="float-left relative z-10 w-full px-[8%] xl:py-8 lg:py-6 pt-10 pb-4 flex justify-between">
       <Link href="/" className="max-h-16">
         <Image
-          className="h-logo-clamped"
+          className="responsive-logo w-auto"
           priority
           src={logoImg}
           alt="Logo Streamvibe"

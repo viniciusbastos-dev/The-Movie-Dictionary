@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 
-const GenreCarouselSlider = ({
+const SliderWrapper = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -19,4 +19,4 @@ const GenreCarouselSlider = ({
   return <div className="swiper-slide">{children}</div>;
 };
 
-export default GenreCarouselSlider;
+export default SliderWrapper;
