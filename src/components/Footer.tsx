@@ -10,9 +10,9 @@ const Footer = () => {
           <FooterList key={item.title} title={item.title} data={item} />
         ))}
       </div>
-      <div className="border-t-1 border-black-15 flex justify-between pt-6 text-gray-60">
-        <span>&copy; 2024 The Movie Dictionary.</span>
-        <ul className="list-with-bar flex gap-5">
+      <div className="border-t-1 border-black-15 flex flex-col gap-5 lg:flex-row justify-between pt-6 text-gray-60 text-csm">
+        <span className="">&copy; 2024 The Movie Dictionary.</span>
+        <ul className="list-with-bar flex gap-4">
           <li>Termos de uso</li>
           <li>Política de privacidade</li>
           <li>Política de Cookies</li>
