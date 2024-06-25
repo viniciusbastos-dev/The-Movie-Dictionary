@@ -18,10 +18,10 @@ const Header = () => {
       </Link>
       <NavBar />
       <div className=" gap-8 hidden lg:flex">
-        <button>
+        <button aria-label="Pesquisar">
           <SVG.SearchIcon />
         </button>
-        <button>
+        <button aria-label="Notificações">
           <SVG.NotificationIcon />
         </button>
       </div>

@@ -38,6 +38,11 @@
     border-right: 1px solid #262626;
     padding-right: 16px;
   }
+
+  .swiper-pagination-mobile.genre.swiper-pagination-progressbar.swiper-pagination-horizontal {
+    bottom: 0;
+    top: auto;
+  }
 }
 
 body {

@@ -6,6 +6,8 @@ import { Genre } from "@/@types/types";
 import GenreCard from "@/components/GenreCard";
 import DeviceCard from "@/components/DeviceCard";
 import { devicesData } from "@/config/config";
+import SectionContainer from "@/components/SectionContainer";
+import SwiperNavigation from "@/components/SwiperNavigation";
 
 export default async function Home() {
   const genres: Genre[] = await getGenres();
@@ -22,6 +24,7 @@ export default async function Home() {
               fill
               priority
               className="object-cover object-center -z-10"
+              sizes="100vw"
             />
           </div>
           <div className="absolute bottom-0 px-[12%]">
@@ -40,36 +43,35 @@ export default async function Home() {
           </div>
         </section>
 
-        <section id="categorias" className="mx-[8%] mb-20 lg:mb-32 xl:mb-36">
+        <SectionContainer
+          id="categorias"
+          title="Explore nossa ampla variedade de categorias"
+          subtitle="Seja procurando por uma comédia para te fazer rir, um
+        drama para te fazer refletir, ou um documentário para aprender algo
+        novo"
+          rightComponent={<SwiperNavigation swiperName="genre" />}
+        >
           <Carousel
-            title="Explore nossa ampla variedade de categorias"
-            subtitle="Seja procurando por uma comédia para te fazer rir, um drama para te
-            fazer refletir, ou um documentário para aprender algo novo"
             swiperName="genre"
             data={genres}
             renderCard={(genre) => (
               <GenreCard data={genre} movies={movieList} />
             )}
           />
-        </section>
-        <section id="dispositivos" className="mx-[8%]  mb-20 lg:mb-32 xl:mb-36">
-          <div className="flex flex-col gap-3 section-mb-clamp">
-            <h2 className="title-clamped font-bold text-clg">
-              Oferecemos uma experiência de streaming em diversos dispositivos.
-            </h2>
-            <p className="small-subtitle-clamped text-gray-60 text-csm">
-              Com o The Movie Dictionary, você pode desfrutar dos seus filmes e
+        </SectionContainer>
+        <SectionContainer
+          title="Oferecemos uma experiência de streaming em diversos dispositivos."
+          subtitle="Com o The Movie Dictionary, você pode desfrutar dos seus filmes e
               programas de TV favoritos a qualquer hora e em qualquer lugar.
               Nossa plataforma é compatível com uma ampla gama de dispositivos,
-              garantindo que você nunca perca um momento de entretenimento.
-            </p>
-          </div>
+              garantindo que você nunca perca um momento de entretenimento."
+        >
           <div className="grid grid-cols-1 md:grid-cols-2 xxl:grid-cols-3 gap-[30px] ">
             {devicesData.map((device, index) => (
               <DeviceCard key={index} data={device} />
             ))}
           </div>
-        </section>
+        </SectionContainer>
       </main>
     </>
   );
