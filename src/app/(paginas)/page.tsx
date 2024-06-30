@@ -5,9 +5,11 @@ import { fetchMoviesByGenres, getGenres } from "@/lib/getData";
 import { Genre } from "@/@types/types";
 import GenreCard from "@/components/GenreCard";
 import DeviceCard from "@/components/DeviceCard";
-import { devicesData } from "@/config/config";
+import { FAQData, devicesData } from "@/config/config";
 import SectionContainer from "@/components/SectionContainer";
 import SwiperNavigation from "@/components/SwiperNavigation";
+import Button from "@/components/Button";
+import Dropdown from "@/components/Dropdown";
 
 export default async function Home() {
   const genres: Genre[] = await getGenres();
@@ -59,6 +61,7 @@ export default async function Home() {
             )}
           />
         </SectionContainer>
+
         <SectionContainer
           title="Oferecemos uma experiência de streaming em diversos dispositivos."
           subtitle="Com o The Movie Dictionary, você pode desfrutar dos seus filmes e
@@ -70,6 +73,27 @@ export default async function Home() {
             {devicesData.map((device, index) => (
               <DeviceCard key={index} data={device} />
             ))}
+          </div>
+        </SectionContainer>
+
+        <SectionContainer
+          title="Perguntas Frequentes"
+          subtitle="Tem perguntas? Temos respostas! Confira nossa seção de FAQ para encontrar respostas às perguntas mais comuns sobre o The Movie Dictionary."
+          rightComponent={
+            <Button text="Faça uma pergunta" link href="/support" />
+          }
+        >
+          <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-20 gap-0 ">
+            <div>
+              {FAQData.slice(0, 4).map((item, index) => (
+                <Dropdown key={index} data={item} />
+              ))}
+            </div>
+            <div>
+              {FAQData.slice(4, 8).map((item, index) => (
+                <Dropdown key={index} data={item} />
+              ))}
+            </div>
           </div>
         </SectionContainer>
       </main>

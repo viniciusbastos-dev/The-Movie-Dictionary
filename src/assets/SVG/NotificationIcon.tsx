@@ -1,23 +1,20 @@
 import React from "react";
 
-interface Props {
-  fill?: string;
-  size?: number;
-}
+interface Props {}
 
-export const NotificationIcon = ({ fill = "#FFF", size = 34 }: Props) => (
+export const NotificationIcon = ({}: Props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={size}
-    height={size}
     fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={1.5}
+    stroke="currentColor"
+    className="size-6"
   >
     <path
-      stroke={fill}
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth={2}
-      d="M21.047 24.2a33.79 33.79 0 0 0 7.727-1.857 12.703 12.703 0 0 1-3.274-8.53V12.75a8.5 8.5 0 0 0-17 0v1.063c0 3.28-1.24 6.271-3.275 8.53a33.79 33.79 0 0 0 7.728 1.856m8.094 0a34.358 34.358 0 0 1-8.094 0m8.094 0a4.25 4.25 0 1 1-8.094 0"
+      d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
     />
   </svg>
 );

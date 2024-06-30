@@ -17,11 +17,11 @@ const Header = () => {
         />
       </Link>
       <NavBar />
-      <div className=" gap-8 hidden lg:flex">
-        <button aria-label="Pesquisar">
+      <div className=" gap-8 hidden lg:flex lg:items-center">
+        <button aria-label="Pesquisar" className="size-8">
           <SVG.SearchIcon />
         </button>
-        <button aria-label="Notificações">
+        <button aria-label="Notificações" className="size-8">
           <SVG.NotificationIcon />
         </button>
       </div>

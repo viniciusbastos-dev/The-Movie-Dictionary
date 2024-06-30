@@ -8,12 +8,29 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "fit-content" },
+        },
+        "accordion-up": {
+          from: { height: "fit-content" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
       screens: {
         xxl: "1440px",
         xs: "360px",
       },
       fontSize: {
+        "c16-20": "clamp(16px, 1.6vw,20px )",
+        "c12-16": "clamp(12px, 1.25vw,16px )",
         clg: "clamp(24px, 3vw, 38px)",
+        cmd: "clamp(18px, 2vw, 24px)",
         "csm-md": "clamp(14px, 2vw, 24px)",
         csm: "clamp(14px, 1.5vw, 18px)",
       },

@@ -1,23 +1,20 @@
 import React from "react";
 
-interface Props {
-  fill?: string;
-  size?: number;
-}
+interface Props {}
 
-export const SearchIcon = ({ fill = "#FFF", size = 34 }: Props) => (
+export const SearchIcon = ({}: Props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={size}
-    height={size}
     fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={1.5}
+    stroke="currentColor"
+    className="size-6"
   >
     <path
-      stroke={fill}
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeWidth={2}
-      d="m29.75 29.75-7.362-7.362m0 0a10.591 10.591 0 0 0 3.112-7.513c0-5.868-4.757-10.625-10.625-10.625S4.25 9.007 4.25 14.875 9.007 25.5 14.875 25.5c2.934 0 5.59-1.19 7.513-3.112Z"
+      d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
     />
   </svg>
 );

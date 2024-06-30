@@ -15,7 +15,7 @@ const SectionContainer: React.FC<Props> = ({
 }) => {
   return (
     <section {...rest} className="mx-[8%] mb-20 lg:mb-32 xl:mb-36">
-      <div className="flex justify-between items-start gap-3 section-mb-clamp">
+      <div className="flex justify-between items-end flex-wrap gap-6 section-mb-clamp">
         <div className="flex flex-col gap-3">
           <h2 className="title-clamped font-bold text-clg">{title}</h2>
           {subtitle && (
