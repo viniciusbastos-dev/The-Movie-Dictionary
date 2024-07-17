@@ -23,9 +23,9 @@ const MovieBanner = async () => {
       <h1 className="text-clg"></h1>
       <p className="hidden md:block text-gray-60">
         With the help of remaining allies, the Avengers must assemble once more
-        in order to undo Thanos's actions and undo the chaos to the universe, no
-        matter what consequences may be in store, and no matter who they face...
-        Avenge the fallen.
+        in order to undo Thanos&apos;s actions and undo the chaos to the
+        universe, no matter what consequences may be in store, and no matter who
+        they face... Avenge the fallen.
       </p>
       <Button text="Play Now" className="mt-6" />
     </div>
