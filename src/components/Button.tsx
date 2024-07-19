@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React, { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
 
@@ -25,18 +26,24 @@ interface ButtonWithLink
 // Tipo condicional que pode ser um dos dois
 type Props = ButtonWithoutLink | ButtonWithLink;
 
-const Button: React.FC<Props> = ({ text, link, href, ...rest }) => {
+const Button: React.FC<Props> = ({ className, text, link, href, ...rest }) => {
   return link && href ? (
     <Link
       href={href}
-      className="bg-red-45 py-3 px-5 lg:py-4 lg:px-6 text-csm rounded-lg font-semibold"
+      className={cn(
+        "bg-red-45 py-3 px-5 lg:py-4 lg:px-6 text-csm rounded-lg font-semibold",
+        className
+      )}
     >
       {text}
     </Link>
   ) : (
     <button
       {...(rest as ButtonHTMLAttributes<HTMLButtonElement>)}
-      className="bg-red-45 py-3 px-5 lg:py-4 lg:px-6 text-csm rounded-lg font-semibold"
+      className={cn(
+        "bg-red-45 py-3 px-5 lg:py-4 lg:px-6 text-csm rounded-lg font-semibold",
+        className
+      )}
     >
       {text}
     </button>

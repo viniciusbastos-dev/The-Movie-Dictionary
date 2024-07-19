@@ -25,8 +25,9 @@ export default async function Home() {
               alt="Imagem com vários filmes e séries em quadrados."
               fill
               priority
+              quality={100}
               className="object-cover object-center -z-10"
-              sizes="100vw"
+              sizes="(max-width: 1024px) 50vw, (max-width: 1920px) 100vw, 100vw"
             />
           </div>
           <div className="absolute bottom-0 px-[12%]">
