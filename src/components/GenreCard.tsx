@@ -19,11 +19,11 @@ const GenreCard: React.FC<Props> = ({ data, movies }) => {
         {genreMovies[data.name].map((item: any) => (
           <div className="relative card-image-clamp" key={item.id}>
             <Image
-              alt={item.title}
+              alt={`Poster do filme ${item.title}`}
               src={`https://image.tmdb.org/t/p/original${item.poster_path}`}
               className="object-cover object-center rounded-lg"
               loading="lazy"
-              sizes="120px"
+              sizes="(max-width: 600px) 60px, (max-width: 1200px) 12vw, 120px"
               fill
             />
           </div>

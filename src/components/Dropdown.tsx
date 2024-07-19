@@ -37,7 +37,11 @@ const Dropdown: React.FC<Props> = ({ data }) => {
           </span>
           <h3 className="text-cmd">{data.question}</h3>
         </div>
-        <button onClick={toggleDropdown}>
+        <button
+          onClick={toggleDropdown}
+          aria-label={isOpen ? "Fechar dropdown" : "Abrir dropdown"}
+          aria-expanded={isOpen}
+        >
           {isOpen ? (
             <MinusIcon size="size-6 lg:size-8" />
           ) : (
