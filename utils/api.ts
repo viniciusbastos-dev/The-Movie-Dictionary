@@ -10,7 +10,7 @@ export async function fetchFromApi(
     Authorization: `Bearer ${process.env.MOVIE_DB_API_TOKEN}`,
   };
 
-  const config = {
+  const config: RequestInit = {
     ...options,
     headers: {
       ...defaultHeaders,

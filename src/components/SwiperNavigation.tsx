@@ -7,9 +7,9 @@ interface Props {
 
 const SwiperNavigation: React.FC<Props> = ({ swiperName }) => {
   return (
-    <div className="hidden lg:flex border-1 border-black-12 bg-black-6 p-3 rounded-[10px] gap-3 min-h-[72px]">
+    <div className="hidden lg:flex border border-black-12 bg-black-6 p-3 rounded-[10px] gap-3 min-h-[72px]">
       <div
-        className={`swiper-prev-button ${swiperName} cursor-pointer bg-black-10 rounded-md border-1 border-black-12 p-[10px]`}
+        className={`swiper-prev-button ${swiperName} cursor-pointer bg-black-10 rounded-md border border-black-12 p-[10px]`}
       >
         <SVG.ArrowLeft />
       </div>
@@ -19,7 +19,7 @@ const SwiperNavigation: React.FC<Props> = ({ swiperName }) => {
       />
 
       <div
-        className={`swiper-next-button ${swiperName} cursor-pointer bg-black-10 rounded-md border-1 border-black-12 p-[10px]`}
+        className={`swiper-next-button ${swiperName} cursor-pointer bg-black-10 rounded-md border border-black-12 p-[10px]`}
       >
         <SVG.ArrowRight />
       </div>

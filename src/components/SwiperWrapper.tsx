@@ -4,7 +4,6 @@ import React, { useEffect, useRef } from "react";
 import SwiperCore from "swiper";
 import { Swiper } from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
-import "swiper/swiper-bundle.css";
 
 SwiperCore.use([Navigation, Pagination]);
 
@@ -19,7 +18,7 @@ const SwiperWrapper: React.FC<Props> = ({ swiperName, children }) => {
 
   const initializeSwiper = () => {
     if (swiperRef.current) {
-      swiperRef.current.destroy(true, true); // Destrua a instância anterior
+      swiperRef.current.destroy(true, true);
     }
 
     if (containerRef.current) {

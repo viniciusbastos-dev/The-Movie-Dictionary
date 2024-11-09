@@ -32,10 +32,10 @@ const Dropdown: React.FC<Props> = ({ data }) => {
     <div className="question relative px-3 py-5">
       <div className="flex items-center justify-between">
         <div className="flex gap-4 lg:gap-5 items-center">
-          <span className="bg-black-12 border-black-15 border-1 inline-block rounded-xl text-c16-20 font-semibold self-start p-3 lg:p-4 xl:p-5">
-            0{data.id}
+          <span className="bg-black-12 border-black-15 border inline-block rounded-xl text-c16-20 font-semibold self-start p-3 lg:p-4 xl:p-5">
+            0{data?.id}
           </span>
-          <h3 className="text-cmd">{data.question}</h3>
+          <h3 className="text-cmd">{data?.question}</h3>
         </div>
         <button
           onClick={toggleDropdown}
@@ -56,7 +56,7 @@ const Dropdown: React.FC<Props> = ({ data }) => {
           isOpen ? "h-auto" : "h-0"
         )}
       >
-        <p className="text-gray-60 text-csm ">{data.answer}</p>
+        <p className="text-gray-60 text-csm ">{data?.answer}</p>
       </div>
     </div>
   );

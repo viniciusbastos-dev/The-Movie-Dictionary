@@ -1,20 +1,17 @@
 import Image from "next/image";
 import background from "@/assets/images/background.png";
-import Carousel from "@/components/Carousel";
-import { fetchMoviesByGenres, getGenres } from "@/lib/getData";
-import { Genre } from "@/@types/types";
-import GenreCard from "@/components/GenreCard";
 import DeviceCard from "@/components/DeviceCard";
 import { FAQData, devicesData } from "@/config/config";
 import SectionContainer from "@/components/SectionContainer";
 import SwiperNavigation from "@/components/SwiperNavigation";
 import Button from "@/components/Button";
 import Dropdown from "@/components/Dropdown";
+import GenreCarousel, {
+  GenreCarouselSkeleton,
+} from "@/components/GenreCarousel";
+import { Suspense } from "react";
 
 export default async function Home() {
-  const genres: Genre[] = await getGenres();
-  const movieList = await fetchMoviesByGenres(genres);
-
   return (
     <>
       <main>
@@ -54,13 +51,9 @@ export default async function Home() {
         novo"
           rightComponent={<SwiperNavigation swiperName="genre" />}
         >
-          <Carousel
-            swiperName="genre"
-            data={genres}
-            renderCard={(genre) => (
-              <GenreCard data={genre} movies={movieList} />
-            )}
-          />
+          <Suspense fallback={<GenreCarouselSkeleton />}>
+            <GenreCarousel />
+          </Suspense>
         </SectionContainer>
 
         <SectionContainer
@@ -71,7 +64,7 @@ export default async function Home() {
               garantindo que você nunca perca um momento de entretenimento."
         >
           <div className="grid grid-cols-1 md:grid-cols-2 xxl:grid-cols-3 gap-[30px] ">
-            {devicesData.map((device, index) => (
+            {devicesData?.map((device, index) => (
               <DeviceCard key={index} data={device} />
             ))}
           </div>
@@ -86,12 +79,12 @@ export default async function Home() {
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-20 gap-0 ">
             <div>
-              {FAQData.slice(0, 4).map((item, index) => (
+              {FAQData?.slice(0, 4)?.map((item, index) => (
                 <Dropdown key={index} data={item} />
               ))}
             </div>
             <div>
-              {FAQData.slice(4, 8).map((item, index) => (
+              {FAQData?.slice(4, 8)?.map((item, index) => (
                 <Dropdown key={index} data={item} />
               ))}
             </div>

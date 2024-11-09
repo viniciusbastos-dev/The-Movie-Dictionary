@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import SwiperWrapper from "./SwiperWrapper";
 import SliderWrapper from "./SliderWrapper";
 
@@ -22,11 +22,7 @@ const Carousel: React.FC<Props> = ({ data, renderCard, swiperName }) => {
   return (
     <>
       <SwiperWrapper swiperName={swiperName}>
-        <Suspense
-          fallback={<div className="text-center text-2xl">Carregando...</div>}
-        >
-          <CarouselData data={data} renderCard={renderCard} />
-        </Suspense>
+        <CarouselData data={data} renderCard={renderCard} />
       </SwiperWrapper>
       <div className="lg:hidden relative mt-8 mx-auto w-20">
         <div className={`swiper-pagination-mobile ${swiperName}`} />
