@@ -29,7 +29,7 @@ const ToggleListView: React.FC<Props> = () => {
         onValueChange={handleToggle}
       >
         <ToggleGroupItem value="movie">{t("movies")}</ToggleGroupItem>
-        <ToggleGroupItem value="tv">{t("show")}</ToggleGroupItem>
+        <ToggleGroupItem value="tv">{t("shows")}</ToggleGroupItem>
       </ToggleGroup>
     </div>
   );
