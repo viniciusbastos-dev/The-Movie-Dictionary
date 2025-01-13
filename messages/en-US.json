@@ -1,0 +1,93 @@
+{
+  "HomePage": {
+    "title": "Welcome to The Movie Dictionary",
+    "subtitle": "The Movie Dictionary is your ultimate guide to information about movies and series. Discover everything about your favorite movies and shows, from production details to behind-the-scenes trivia. Explore a vast collection of titles, including cinema classics, recent releases, and popular series. Find detailed reviews, cast lists, and much more to expand your cinematic knowledge.",
+    "exploreTitle": "Explore our wide variety of categories",
+    "exploresubtitle": "Whether you're looking for a comedy to make you laugh, a drama to make you think, or a documentary to learn something new",
+    "devicesTitle": "We offer a streaming experience on various devices.",
+    "devicesSubtitle": "With The Movie Dictionary, you can enjoy your favorite movies and TV shows anytime, anywhere. Our platform is compatible with a wide range of devices, ensuring you never miss a moment of entertainment.",
+    "faqTitle": "Frequently Asked Questions",
+    "faqSubtitle": "Got questions? We've got answers! Check out our FAQ section to find answers to the most common questions about The Movie Dictionary.",
+    "faqLink": "Ask a question"
+  },
+
+  "Devices": {
+    "smartphoneTitle": "Smartphones",
+    "smartphoneInfo": "The Movie Dictionary is optimized for Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store.",
+    "tabletTitle": "Tablet",
+    "tabletInfo": "The Movie Dictionary is optimized for Android and iOS tablets. Download our app from the Google Play Store or the Apple App Store.",
+    "smartTvTitle": "Smart TV",
+    "smartTvInfo": "The Movie Dictionary is compatible with Smart TVs. Download our app from your TV's app store.",
+    "laptopTitle": "Laptop",
+    "laptopInfo": "The Movie Dictionary can be accessed on laptops. Visit our website to enjoy all available content.",
+    "consolesTitle": "Consoles",
+    "consolesInfo": "The Movie Dictionary is compatible with gaming consoles. Download our app from your console's app store.",
+    "vrTitle": "Headsets VR",
+    "vrInfo": "The Movie Dictionary supports virtual reality headsets. Download our app from your VR device's app store."
+  },
+
+  "FAQ": {
+    "whatIsTheMovieDictionary": "What is The Movie Dictionary?",
+    "whatIsTheMovieDictionaryAnswer": "The Movie Dictionary is a website that provides information about movies and TV shows.",
+
+    "howToSignUp": "How can I sign up for The Movie Dictionary?",
+    "howToSignUpAnswer": "You can sign up for The Movie Dictionary by visiting our website and following the sign-up instructions.",
+
+    "whichDevicesAreCompatible": "Which devices are compatible with The Movie Dictionary?",
+    "whichDevicesAreCompatibleAnswer": "The Movie Dictionary is compatible with computers, smartphones, tablets, and smart TVs.",
+
+    "canIDownloadMovies": "Can I download movies and shows for offline viewing?",
+    "canIDownloadMoviesAnswer": "No, The Movie Dictionary does not allow downloading movies and shows for offline viewing. It is only for viewing information.",
+
+    "isThereAFreeTrial": "Is there a free trial?",
+    "isThereAFreeTrialAnswer": "Yes, we offer a 7-day free trial for new users.",
+
+    "canICancelSubscription": "Can I cancel my subscription at any time?",
+    "canICancelSubscriptionAnswer": "Yes, you can cancel your subscription at any time through your account settings.",
+
+    "whatPaymentMethodsAreAccepted": "What payment methods are accepted?",
+    "whatPaymentMethodsAreAcceptedAnswer": "We accept various payment methods, including credit and debit cards, PayPal, and others.",
+
+    "doesTheMovieDictionaryOfferSupport": "Does The Movie Dictionary offer customer support?",
+    "doesTheMovieDictionaryOfferSupportAnswer": "Yes, our customer support is available 24/7 to assist you with any questions or issues."
+  },
+
+  "Footer": {
+    "home": "Home",
+    "homeCategory": "Categories",
+    "homeDevices": "Devices",
+    "homeFAQ": "FAQ",
+
+    "movies": "Movies",
+    "moviesGenres": "Genres",
+    "moviesTrends": "Trends",
+    "moviesReleases": "Releases",
+    "moviesPopular": "Popular",
+
+    "shows": "Shows",
+    "showsGenres": "Genres",
+    "showsTrends": "Trends",
+    "showsReleases": "Releases",
+    "showsPopular": "Popular",
+
+    "support": "Support",
+    "contact-us": "Contact Us",
+
+    "subscription": "Subscription",
+    "subscriptionPlans": "Plans",
+    "subscriptionFeatures": "Features",
+
+    "contact": "Connect with us",
+
+    "termsOfUse": "Terms of Use",
+    "privacyPolicy": "Privacy Policy",
+    "cookiesPolicy": "Cookies Policy"
+  },
+
+  "MoviesPage": {
+    "movies": "Movies",
+    "shows": "TV Shows",
+    "categories": "Categories",
+    "trends": "Trends"
+  }
+}

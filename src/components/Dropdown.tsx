@@ -3,16 +3,18 @@
 import React, { useEffect, useRef, useState } from "react";
 import { MinusIcon, PlusIcon } from "@/assets/SVG";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 interface Props {
   data: {
-    id: number;
-    question: string;
-    answer: string;
+    number: number;
+    questionKey: string;
+    answerKey: string;
   };
 }
 
 const Dropdown: React.FC<Props> = ({ data }) => {
+  const t = useTranslations("FAQ");
   const [isOpen, setIsOpen] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
 
@@ -33,9 +35,9 @@ const Dropdown: React.FC<Props> = ({ data }) => {
       <div className="flex items-center justify-between">
         <div className="flex gap-4 lg:gap-5 items-center">
           <span className="bg-black-12 border-black-15 border inline-block rounded-xl text-c16-20 font-semibold self-start p-3 lg:p-4 xl:p-5">
-            0{data?.id}
+            0{data.number}
           </span>
-          <h3 className="text-cmd">{data?.question}</h3>
+          <h3 className="text-cmd">{t(data?.questionKey)}</h3>
         </div>
         <button
           onClick={toggleDropdown}
@@ -56,7 +58,7 @@ const Dropdown: React.FC<Props> = ({ data }) => {
           isOpen ? "h-auto" : "h-0"
         )}
       >
-        <p className="text-gray-60 text-csm ">{data?.answer}</p>
+        <p className="text-gray-60 text-csm ">{t(data?.answerKey)}</p>
       </div>
     </div>
   );

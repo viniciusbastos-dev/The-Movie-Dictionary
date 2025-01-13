@@ -10,8 +10,10 @@ import GenreCarousel, {
   GenreCarouselSkeleton,
 } from "@/components/GenreCarousel";
 import { Suspense } from "react";
+import { useTranslations } from "next-intl";
 
-export default async function Home() {
+export default function Home() {
+  const t = useTranslations("HomePage");
   return (
     <>
       <main>
@@ -28,27 +30,15 @@ export default async function Home() {
             />
           </div>
           <div className="absolute bottom-0 px-[12%]">
-            <h1 className="title-header-clamped font-bold">
-              Bem-vindo ao The Movie Dictionary
-            </h1>
-            <p className="text-csm text-gray-60">
-              The Movie Dictionary é o seu guia definitivo para informações
-              sobre filmes e séries. Descubra tudo sobre seus filmes e séries
-              favoritos, desde detalhes de produção até curiosidades dos
-              bastidores. Explore uma vasta coleção de títulos, incluindo
-              clássicos do cinema, lançamentos recentes, e séries populares.
-              Encontre resenhas detalhadas, listas de elenco, e muito mais para
-              expandir seu conhecimento cinematográfico.
-            </p>
+            <h1 className="title-header-clamped font-bold">{t("title")}</h1>
+            <p className="text-csm text-gray-60">{t("subtitle")}</p>
           </div>
         </section>
 
         <SectionContainer
           id="categorias"
-          title="Explore nossa ampla variedade de categorias"
-          subtitle="Seja procurando por uma comédia para te fazer rir, um
-        drama para te fazer refletir, ou um documentário para aprender algo
-        novo"
+          title={t("exploreTitle")}
+          subtitle={t("exploreSubtitle")}
           rightComponent={<SwiperNavigation swiperName="genre" />}
         >
           <Suspense fallback={<GenreCarouselSkeleton />}>
@@ -57,11 +47,9 @@ export default async function Home() {
         </SectionContainer>
 
         <SectionContainer
-          title="Oferecemos uma experiência de streaming em diversos dispositivos."
-          subtitle="Com o The Movie Dictionary, você pode desfrutar dos seus filmes e
-              programas de TV favoritos a qualquer hora e em qualquer lugar.
-              Nossa plataforma é compatível com uma ampla gama de dispositivos,
-              garantindo que você nunca perca um momento de entretenimento."
+          id="dispositivos"
+          title={t("devicesTitle")}
+          subtitle={t("devicesSubtitle")}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 xxl:grid-cols-3 gap-[30px] ">
             {devicesData?.map((device, index) => (
@@ -71,11 +59,10 @@ export default async function Home() {
         </SectionContainer>
 
         <SectionContainer
-          title="Perguntas Frequentes"
-          subtitle="Tem perguntas? Temos respostas! Confira nossa seção de FAQ para encontrar respostas às perguntas mais comuns sobre o The Movie Dictionary."
-          rightComponent={
-            <Button text="Faça uma pergunta" link href="/support" />
-          }
+          id="faq"
+          title={t("faqTitle")}
+          subtitle={t("faqSubtitle")}
+          rightComponent={<Button text={t("faqLink")} link href="/support" />}
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-20 gap-0 ">
             <div>

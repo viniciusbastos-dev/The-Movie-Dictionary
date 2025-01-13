@@ -23,53 +23,54 @@ export interface FooterSection {
 // Array de dados do footer
 export const footerLinksData: FooterSection[] = [
   {
-    title: "Início",
+    title: "home",
     links: [
-      { label: "Categorias", href: "#categorias" },
-      { label: "Dispositivos", href: "#dispositivos" },
-      { label: "Preços", href: "#" },
-      { label: "FAQ", href: "#" },
+      { label: "homeCategory", href: "#categorias" },
+      { label: "homeDevices", href: "#dispositivos" },
+      { label: "homeFAQ", href: "#faq" },
     ],
   },
   {
-    title: "Filmes",
+    title: "movies",
     links: [
-      { label: "Gêneros", href: "#" },
-      { label: "Tendências", href: "#" },
-      { label: "Lançamentos", href: "#" },
-      { label: "Popular", href: "#" },
+      { label: "moviesGenres", href: "#" },
+      { label: "moviesTrends", href: "#" },
+      { label: "moviesReleases", href: "#" },
+      { label: "moviesPopular", href: "#" },
     ],
   },
   {
-    title: "Shows",
+    title: "shows",
     links: [
-      { label: "Gêneros", href: "#" },
-      { label: "Tendências", href: "#" },
-      { label: "Lançamentos", href: "#" },
-      { label: "Popular", href: "#" },
+      { label: "showsGenres", href: "#" },
+      { label: "showsTrends", href: "#" },
+      { label: "showsReleases", href: "#" },
+      { label: "showsPopular", href: "#" },
     ],
   },
   {
-    title: "Suporte",
-    links: [{ label: "Contate-nos", href: "#" }],
+    title: "support",
+    links: [{ label: "contact-us", href: "#" }],
   },
   {
-    title: "Inscrição",
+    title: "subscription",
     links: [
-      { label: "Planos", href: "#" },
-      { label: "Features", href: "#" },
+      { label: "subscriptionPlans", href: "#" },
+      { label: "subscriptionFeatures", href: "#" },
     ],
   },
   {
-    title: "Conecte-se conosco",
+    title: "contact",
     links: [
       {
         href: "https://www.linkedin.com/in/vinicius-bastos-silva",
         icon: "linkedin",
+        label: "Linkedin",
       },
       {
         href: "https://www.github.com/viniciusbastos-dev",
         icon: "github",
+        label: "Github",
       },
     ],
   },
@@ -77,84 +78,76 @@ export const footerLinksData: FooterSection[] = [
 
 export const devicesData = [
   {
-    name: "Smartphones",
-    info: "O The Movie Dictionary é otimizado para smartphones Android e iOS. Baixe nosso aplicativo na Google Play Store ou na Apple App Store.",
+    name: "smartphoneTitle",
+    info: "smartphoneInfo",
     image: smartphone,
   },
   {
-    name: "Tablet",
-    info: "O The Movie Dictionary é otimizado para tablets Android e iOS. Baixe nosso aplicativo na Google Play Store ou na Apple App Store.",
+    name: "tabletTitle",
+    info: "tabletInfo",
     image: tablet,
   },
   {
-    name: "Smart TV",
-    info: "O The Movie Dictionary é compatível com Smart TVs. Baixe nosso aplicativo na loja de aplicativos da sua TV.",
+    name: "smartTvTitle",
+    info: "smartTvInfo",
     image: smartTV,
   },
   {
-    name: "Laptops",
-    info: "O The Movie Dictionary pode ser acessado em laptops. Acesse nosso site e desfrute de todo o conteúdo disponível.",
+    name: "laptopTitle",
+    info: "laptopInfo",
     image: laptop,
   },
   {
-    name: "Consoles",
-    info: "O The Movie Dictionary é compatível com consoles de videogame. Baixe nosso aplicativo na loja de aplicativos do seu console.",
+    name: "consolesTitle",
+    info: "consolesInfo",
     image: console,
   },
   {
-    name: "Headsets VR",
-    info: "O The Movie Dictionary oferece suporte para headsets de realidade virtual. Baixe nosso aplicativo na loja de aplicativos do seu dispositivo VR.",
+    name: "vrTitle",
+    info: "vrInfo",
     image: vr,
   },
 ];
 
 export const FAQData = [
   {
-    id: 1,
-    question: "O que é o The Movie Dictionary?",
-    answer:
-      "O The Movie Dictionary é um site que permite ver informações sobre filmes e séries.",
+    number: 1,
+    questionKey: "whatIsTheMovieDictionary",
+    answerKey: "whatIsTheMovieDictionaryAnswer",
   },
   {
-    id: 2,
-    question: "Como posso me inscrever no The Movie Dictionary?",
-    answer:
-      "Você pode se inscrever no The Movie Dictionary acessando nosso site e seguindo as instruções de inscrição.",
+    number: 2,
+    questionKey: "howToSignUp",
+    answerKey: "howToSignUpAnswer",
   },
   {
-    id: 3,
-    question: "Quais dispositivos são compatíveis com o The Movie Dictionary?",
-    answer:
-      "O The Movie Dictionary é compatível com computadores, smartphones, tablets e smart TVs.",
+    number: 3,
+    questionKey: "whichDevicesAreCompatible",
+    answerKey: "whichDevicesAreCompatibleAnswer",
   },
   {
-    id: 4,
-    question: "Posso baixar filmes e programas para assistir offline?",
-    answer:
-      "Não, o The Movie Dictionary não permite o download de filmes e programas para assistir offline. Ele é apenas para ver informações.",
+    number: 4,
+    questionKey: "canIDownloadMovies",
+    answerKey: "canIDownloadMoviesAnswer",
   },
   {
-    id: 5,
-    question: "Há um período de teste gratuito?",
-    answer:
-      "Sim, oferecemos um período de teste gratuito de 7 dias para novos usuários.",
+    number: 5,
+    questionKey: "isThereAFreeTrial",
+    answerKey: "isThereAFreeTrialAnswer",
   },
   {
-    id: 6,
-    question: "Posso cancelar minha assinatura a qualquer momento?",
-    answer:
-      "Sim, você pode cancelar sua assinatura a qualquer momento através das configurações da sua conta.",
+    number: 6,
+    questionKey: "canICancelSubscription",
+    answerKey: "canICancelSubscriptionAnswer",
   },
   {
-    id: 7,
-    question: "Quais são os métodos de pagamento aceitos?",
-    answer:
-      "Aceitamos diversos métodos de pagamento, incluindo cartões de crédito e débito, PayPal e outros.",
+    number: 7,
+    questionKey: "whatPaymentMethodsAreAccepted",
+    answerKey: "whatPaymentMethodsAreAcceptedAnswer",
   },
   {
-    id: 8,
-    question: "O The Movie Dictionary oferece suporte ao cliente?",
-    answer:
-      "Sim, nosso suporte ao cliente está disponível 24/7 para ajudá-lo com qualquer dúvida ou problema.",
+    number: 8,
+    questionKey: "doesTheMovieDictionaryOfferSupport",
+    answerKey: "doesTheMovieDictionaryOfferSupportAnswer",
   },
 ];

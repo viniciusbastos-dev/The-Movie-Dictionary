@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 
@@ -6,6 +7,7 @@ interface Props {
 }
 
 const DeviceCard: React.FC<Props> = ({ data }) => {
+  const t = useTranslations("Devices");
   return (
     <div className="flex flex-col gap-6 bg-black-6 border border-black-15 p-6 lg:p-10 xl:p-[50px] rounded-[10px] bg-gradient-to-tr from-transparent via-transparent  to-red45-opaque">
       <div className="flex gap-4 items-center">
@@ -17,9 +19,9 @@ const DeviceCard: React.FC<Props> = ({ data }) => {
             loading="lazy"
           />
         </div>
-        <h3 className="font-semibold text-csm-md">{data?.name}</h3>
+        <h3 className="font-semibold text-csm-md">{t(data?.name)}</h3>
       </div>
-      <p className="text-csm text-gray-60">{data?.info}</p>
+      <p className="text-csm text-gray-60">{t(data?.info)}</p>
     </div>
   );
 };

@@ -4,6 +4,8 @@ import { fetchMoviesByGenres, getGenres } from "@/lib/getData";
 import { Genre } from "@/@types/types";
 import GenreCard from "./GenreCard";
 import { Skeleton } from "./ui/skeleton";
+import { cookies } from "next/headers";
+import { getLocale } from "next-intl/server";
 
 interface Props {}
 const GenreCarousel: React.FC<Props> = async () => {

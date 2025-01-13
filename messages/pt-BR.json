@@ -1,0 +1,93 @@
+{
+  "HomePage": {
+    "title": "Bem-vindo ao The Movie Dictionary",
+    "subtitle": "The Movie Dictionary é o seu guia definitivo para informações sobre filmes e séries. Descubra tudo sobre seus filmes e séries favoritos, desde detalhes de produção até curiosidades dos bastidores. Explore uma vasta coleção de títulos, incluindo clássicos do cinema, lançamentos recentes, e séries populares. Encontre resenhas detalhadas, listas de elenco, e muito mais para expandir seu conhecimento cinematográfico.",
+    "exploreTitle": "Explore nossa ampla variedade de categorias",
+    "exploreSubtitle": "Seja procurando por uma comédia para te fazer rir, umdrama para te fazer refletir, ou um documentário para aprender algo novo",
+    "devicesTitle": "Oferecemos uma experiência de streaming em diversos dispositivos.",
+    "devicesSubtitle": "Com o The Movie Dictionary, você pode desfrutar dos seus filmes e programas de TV favoritos a qualquer hora e em qualquer lugar. Nossa plataforma é compatível com uma ampla gama de dispositivos, garantindo que você nunca perca um momento de entretenimento.",
+    "faqTitle": "Perguntas Frequentes",
+    "faqSubtitle": "Tem perguntas? Temos respostas! Confira nossa seção de FAQ para encontrar respostas às perguntas mais comuns sobre o The Movie Dictionary.",
+    "faqLink": "Faça uma pergunta"
+  },
+
+  "Devices": {
+    "smartphoneTitle": "Smartphones",
+    "smartphoneInfo": "O The Movie Dictionary é otimizado para smartphones Android e iOS. Baixe nosso aplicativo na Google Play Store ou na Apple App Store.",
+    "tabletTitle": "Tablet",
+    "tabletInfo": "O The Movie Dictionary é otimizado para tablets Android e iOS. Baixe nosso aplicativo na Google Play Store ou na Apple App Store.",
+    "smartTvTitle": "Smart TV",
+    "smartTvInfo": "O The Movie Dictionary é compatível com Smart TVs. Baixe nosso aplicativo na loja de aplicativos da sua TV.",
+    "laptopTitle": "Laptop",
+    "laptopInfo": "O The Movie Dictionary pode ser acessado em laptops. Acesse nosso site e desfrute de todo o conteúdo disponível.",
+    "consolesTitle": "Consoles",
+    "consolesInfo": "O The Movie Dictionary é compatível com consoles de videogame. Baixe nosso aplicativo na loja de aplicativos do seu console.",
+    "vrTitle": "Headsets VR",
+    "vrInfo": "O The Movie Dictionary oferece suporte para headsets de realidade virtual. Baixe nosso aplicativo na loja de aplicativos do seu dispositivo VR."
+  },
+
+  "FAQ": {
+    "whatIsTheMovieDictionary": "O que é o The Movie Dictionary?",
+    "whatIsTheMovieDictionaryAnswer": "O The Movie Dictionary é um site que permite ver informações sobre filmes e séries.",
+
+    "howToSignUp": "Como posso me inscrever no The Movie Dictionary?",
+    "howToSignUpAnswer": "Você pode se inscrever no The Movie Dictionary acessando nosso site e seguindo as instruções de inscrição.",
+
+    "whichDevicesAreCompatible": "Quais dispositivos são compatíveis com o The Movie Dictionary?",
+    "whichDevicesAreCompatibleAnswer": "O The Movie Dictionary é compatível com computadores, smartphones, tablets e smart TVs.",
+
+    "canIDownloadMovies": "Posso baixar filmes e programas para assistir offline?",
+    "canIDownloadMoviesAnswer": "Não, o The Movie Dictionary não permite o download de filmes e programas para assistir offline. Ele é apenas para ver informações.",
+
+    "isThereAFreeTrial": "Há um período de teste gratuito?",
+    "isThereAFreeTrialAnswer": "Sim, oferecemos um período de teste gratuito de 7 dias para novos usuários.",
+
+    "canICancelSubscription": "Posso cancelar minha assinatura a qualquer momento?",
+    "canICancelSubscriptionAnswer": "Sim, você pode cancelar sua assinatura a qualquer momento através das configurações da sua conta.",
+
+    "whatPaymentMethodsAreAccepted": "Quais são os métodos de pagamento aceitos?",
+    "whatPaymentMethodsAreAcceptedAnswer": "Aceitamos diversos métodos de pagamento, incluindo cartões de crédito e débito, PayPal e outros.",
+
+    "doesTheMovieDictionaryOfferSupport": "O The Movie Dictionary oferece suporte ao cliente?",
+    "doesTheMovieDictionaryOfferSupportAnswer": "Sim, nosso suporte ao cliente está disponível 24/7 para ajudá-lo com qualquer dúvida ou problema."
+  },
+
+  "Footer": {
+    "home": "Início",
+    "homeCategory": "Categorias",
+    "homeDevices": "Dispositivos",
+    "homeFAQ": "FAQ",
+
+    "movies": "Filmes",
+    "moviesGenres": "Gêneros",
+    "moviesTrends": "Tendências",
+    "moviesReleases": "Lançamentos",
+    "moviesPopular": "Popular",
+
+    "shows": "Shows",
+    "showsGenres": "Gêneros",
+    "showsTrends": "Tendências",
+    "showsReleases": "Lançamentos",
+    "showsPopular": "Popular",
+
+    "support": "Suporte",
+    "contact-us": "Contate-nos",
+
+    "subscription": "Inscrição",
+    "subscriptionPlans": "Planos",
+    "subscriptionFeatures": "Features",
+
+    "contact": "Conecte-se conosco",
+
+    "termsOfUse": "Termos de uso",
+    "privacyPolicy": "Política de privacidade",
+    "cookiesPolicy": "Política de Cookies"
+  },
+
+  "MoviesPage": {
+    "movies": "Filmes",
+    "shows": "Séries",
+    "categories": "Categorias",
+    "trends": "Tendências"
+  }
+}

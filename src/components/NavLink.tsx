@@ -1,10 +1,10 @@
 "use client";
 
-import Link, { LinkProps } from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "@/i18n/routing";
+
 import React from "react";
 
-interface Props extends LinkProps {
+interface Props {
   href: string;
   children: React.ReactNode;
 }
