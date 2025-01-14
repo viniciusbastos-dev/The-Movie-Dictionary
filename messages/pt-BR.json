@@ -11,6 +11,13 @@
     "faqLink": "Faça uma pergunta"
   },
 
+  "NavBar": {
+    "home": "Home",
+    "moviesAndSeries": "Filmes & TV",
+    "support": "Suporte",
+    "subscriptions": "Planos"
+  },
+
   "Devices": {
     "smartphoneTitle": "Smartphones",
     "smartphoneInfo": "O The Movie Dictionary é otimizado para smartphones Android e iOS. Baixe nosso aplicativo na Google Play Store ou na Apple App Store.",

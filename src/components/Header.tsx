@@ -4,6 +4,7 @@ import logoImg from "@/assets/images/logo.png";
 import NavBar from "./NavBar";
 import * as SVG from "@/assets/SVG";
 import { Link } from "@/i18n/routing";
+import SwitchLocale from "./SwitchLocale";
 
 const Header = () => {
   return (
@@ -17,14 +18,15 @@ const Header = () => {
         />
       </Link>
       <NavBar />
-      <div className="gap-8 hidden lg:flex lg:items-center">
+      <SwitchLocale />
+      {/*       <div className="gap-8 hidden lg:flex lg:items-center">
         <button aria-label="Pesquisar" className="size-8">
           <SVG.SearchIcon />
         </button>
         <button aria-label="Notificações" className="size-8">
           <SVG.NotificationIcon />
         </button>
-      </div>
+      </div> */}
     </header>
   );
 };

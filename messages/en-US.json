@@ -11,6 +11,13 @@
     "faqLink": "Ask a question"
   },
 
+  "NavBar": {
+    "home": "Home",
+    "moviesAndSeries": "Movies & TV",
+    "support": "Support",
+    "subscriptions": "Subscriptions"
+  },
+
   "Devices": {
     "smartphoneTitle": "Smartphones",
     "smartphoneInfo": "The Movie Dictionary is optimized for Android and iOS smartphones. Download our app from the Google Play Store or the Apple App Store.",

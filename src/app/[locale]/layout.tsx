@@ -48,7 +48,7 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html>
+    <html lang={locale}>
       <head>
         <meta
           name="google-site-verification"
@@ -59,7 +59,6 @@ export default async function RootLayout({
         <body className={manrope.className}>
           <NextIntlClientProvider messages={messages}>
             {children}
-
             <Footer />
           </NextIntlClientProvider>
         </body>

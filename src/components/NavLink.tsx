@@ -11,13 +11,14 @@ interface Props {
 
 const NavLink: React.FC<Props> = ({ href = "#", children, ...rest }) => {
   const path = usePathname();
+  console.log(path);
   return (
     <Link
       {...rest}
       href={href}
       className={`${
         path === href ? "bg-black-10 text-white" : "text-gray-75"
-      } rounded-lg py-[14px] px-6 block xl:text-lg lg:text-sm`}
+      } rounded-lg py-[14px] px-6 block text-sm`}
     >
       {children}
     </Link>
